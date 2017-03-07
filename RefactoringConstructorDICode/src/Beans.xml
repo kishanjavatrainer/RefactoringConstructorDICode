@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+    
+    <bean id="communication" class="com.infotech.service.Communication">
+    <!-- <constructor-arg name="message" ref="activeMQMessage"></constructor-arg> -->
+    <constructor-arg name="message" ref="tibcoMessage"></constructor-arg>
+    </bean>
+    
+    <bean id="activeMQMessage" class="com.infotech.messge.ActiveMQMessage">
+    </bean>
+    <bean id="tibcoMessage" class="com.infotech.messge.TibcoMessage"></bean>
+    </beans>
